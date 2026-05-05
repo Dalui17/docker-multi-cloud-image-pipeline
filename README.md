@@ -149,7 +149,7 @@ docker push <gcp-repo>/my-anir:v1
 ### 🧱 Architecture
 
 <p align="center">
-  <img src="screenshots/architecture.png" width="700">
+  <img src="screenshots/arc.png" width="700">
 </p>
 <img src="screenshots/docker-build.png" width="700">
 ---
