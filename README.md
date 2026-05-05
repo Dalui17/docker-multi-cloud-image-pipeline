@@ -10,68 +10,110 @@
 
 # 🚀 Multi-Cloud Docker Image Pipeline
 
+<p align="center">
+  <img src="https://img.shields.io/badge/Docker-24.0+-blue?logo=docker">
+  <img src="https://img.shields.io/badge/Node.js-18-green?logo=node.js">
+  <img src="https://img.shields.io/badge/AWS-ECR-orange?logo=amazon-aws">
+  <img src="https://img.shields.io/badge/GCP-Artifact%20Registry-blue?logo=google-cloud">
+  <img src="https://img.shields.io/badge/DockerHub-Ready-blue?logo=docker">
+  <img src="https://img.shields.io/badge/Build-Passing-brightgreen">
+  <img src="https://img.shields.io/badge/License-MIT-green">
+</p>
+
+<p align="center">
+<b>Build Once. Push Everywhere. Deploy Anywhere.</b>
+</p>
+
+---
+
 ## 📌 Overview
 
-Built a production-style Docker pipeline that builds, optimizes, and distributes container images across multiple cloud registries.
+This project demonstrates a **production-style Docker pipeline** that:
 
-This project demonstrates real-world DevOps practices including:
-
-* Multi-stage Docker builds
-* Image optimization
-* Multi-cloud registry integration
-* Automated image distribution
+✅ Builds optimized container images using multi-stage builds
+✅ Reduces image size (Alpine optimization)
+✅ Pushes the SAME image to multiple cloud registries
+✅ Automates everything using a single script
 
 ---
 
 ## 🏗️ Architecture
 
-Developer → Docker Build → Optimized Image
-→ Tagging Strategy → Multi-Cloud Push
-→ Docker Hub | AWS ECR | GCP Artifact Registry
+<p align="center">
+  <img src="screenshots/architecture.png" width="800">
+</p>
 
 ---
 
 ## ⚙️ Tech Stack
 
-* Docker
-* AWS ECR
-* Google Artifact Registry
-* Docker Hub
-* Linux (Ubuntu)
-* Shell Scripting
+* 🐳 Docker
+* ☁️ AWS ECR
+* 🌐 Google Artifact Registry
+* 📦 Docker Hub
+* 🐧 Linux (Ubuntu)
+* ⚡ Shell Scripting
 
 ---
 
-## 🐳 Key Features
+## 🔥 Key Features
 
-### ✅ Multi-Stage Build Optimization
+### 🐳 Multi-Stage Build Optimization
 
-* Reduced image size using Alpine base
-* Improved performance and security
+* Lightweight production images
+* Faster deployment
+* Improved security
 
-### ☁️ Multi-Cloud Image Distribution
+---
 
-Single image pushed to:
+### ☁️ Multi-Cloud Distribution
+
+Push images to:
 
 * Docker Hub
 * AWS ECR
 * GCP Artifact Registry
 
-### ⚡ Automation Script
+---
 
-* One command to build + tag + push across all platforms
+### ⚡ One-Click Automation
+
+```bash
+./scripts/push-multicloud.sh
+```
 
 ---
 
-## 🧪 Commands Used
+### 🏷️ Versioned Tagging
 
-### Build Image
+```bash
+app:v1
+app:v2
+app:prod
+```
+
+---
+
+## 🚀 Quick Start
+
+### 1️⃣ Clone Repo
+
+```bash
+git clone https://github.com/Dalui17/docker-multi-cloud-image-pipeline.git
+cd docker-multi-cloud-image-pipeline
+```
+
+---
+
+### 2️⃣ Build Image
 
 ```bash
 docker build -t my-anir .
 ```
 
-### Run Container
+---
+
+### 3️⃣ Run Container
 
 ```bash
 docker run -d -p 80:80 my-anir
@@ -81,14 +123,16 @@ docker run -d -p 80:80 my-anir
 
 ## 📦 Multi-Cloud Push Flow
 
-### Docker Hub
+### 🐳 Docker Hub
 
 ```bash
 docker tag my-anir dalui17/my-anir:v1
 docker push dalui17/my-anir:v1
 ```
 
-### AWS ECR
+---
+
+### ☁️ AWS ECR
 
 ```bash
 aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin <account>.dkr.ecr.us-east-1.amazonaws.com
@@ -97,7 +141,9 @@ docker tag my-anir <ecr-repo>/my-anir:v1
 docker push <ecr-repo>/my-anir:v1
 ```
 
-### GCP Artifact Registry
+---
+
+### 🌐 GCP Artifact Registry
 
 ```bash
 gcloud auth configure-docker northamerica-northeast1-docker.pkg.dev
@@ -108,29 +154,41 @@ docker push <gcp-repo>/my-anir:v1
 
 ---
 
-## 📊 Results
+## 📸 Screenshots
 
-* 🔥 Reduced image size using multi-stage builds
-* 🚀 Automated deployment workflow
-* ☁️ Successfully pushed to 3 cloud registries
-* ⚡ Production-ready container pipeline
+### 🧱 Architecture
+
+<p align="center">
+  <img src="screenshots/architecture.png" width="700">
+</p>
 
 ---
 
-## 📸 Screenshots
+## 📊 Results
 
-(Add your screenshots here)
+* 🚀 Multi-stage optimization implemented
+* ☁️ Successfully pushed to 3 cloud platforms
+* ⚡ Fully automated pipeline
+* 📦 Production-ready container workflow
 
 ---
 
 ## 🎯 Future Enhancements
 
-* Integrate with Jenkins CI/CD
-* Deploy on Kubernetes
-* Add monitoring (Prometheus + Grafana)
+* 🔗 Jenkins CI/CD integration
+* ☸️ Kubernetes deployment
+* 📊 Monitoring (Prometheus + Grafana)
 
 ---
 
 ## 👨‍💻 Author
 
-Anirban Dalui
+**Anirban Dalui**
+DevOps Engineer | Cloud Enthusiast
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub
+
