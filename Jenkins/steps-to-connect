@@ -1,0 +1,44 @@
+# Step 1: Create directory
+mkdir jenkins-simple
+cd jenkins-simple
+
+# Step 2: Create Dockerfile
+cat > Dockerfile << 'EOF'
+FROM jenkins/jenkins:lts
+
+EXPOSE 8080
+EXPOSE 50000
+EOF
+
+# Step 3: Build image
+docker build -t jenkins-simple .
+
+# Step 4: Run container
+docker run -d \
+  --name jenkins \
+  -p 8080:8080 \
+  -p 50000:50000 \
+  -v jenkins_home:/var/jenkins_home \
+  jenkins-simple
+
+# Step 5: Get initial password
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+
+# Step 6: Access Jenkins
+# Open browser: http://localhost:8080
+--------------------------------
+
+# View logs
+docker logs jenkins
+
+# Stop
+docker stop jenkins
+
+# Start
+docker start jenkins
+
+# Remove
+docker rm jenkins
+
+# Get password
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
