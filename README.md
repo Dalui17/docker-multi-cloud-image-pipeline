@@ -1,4 +1,3 @@
-# 🚀 Multi-Cloud Docker Image Pipeline
 <p align="center">
   <img src="https://img.shields.io/badge/Docker-24.0+-blue?logo=docker">
   <img src="https://img.shields.io/badge/Node.js-18-green?logo=node.js">
@@ -8,6 +7,8 @@
   <img src="https://img.shields.io/badge/Build-Passing-brightgreen">
   <img src="https://github.com/Dalui17/docker-multi-cloud-image-pipeline/actions/workflows/docker-ci.yml/badge.svg">
 </p>
+
+# 🚀 Multi-Cloud Docker Image Pipeline
 
 ## 📌 Overview
 
