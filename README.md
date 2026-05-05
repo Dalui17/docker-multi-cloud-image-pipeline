@@ -1,4 +1,13 @@
 # 🚀 Multi-Cloud Docker Image Pipeline
+<p align="center">
+  <img src="https://img.shields.io/badge/Docker-24.0+-blue?logo=docker">
+  <img src="https://img.shields.io/badge/Node.js-18-green?logo=node.js">
+  <img src="https://img.shields.io/badge/AWS-ECR-orange?logo=amazon-aws">
+  <img src="https://img.shields.io/badge/GCP-Artifact%20Registry-blue?logo=google-cloud">
+  <img src="https://img.shields.io/badge/DockerHub-Ready-blue?logo=docker">
+  <img src="https://img.shields.io/badge/Build-Passing-brightgreen">
+  <img src="https://github.com/Dalui17/docker-multi-cloud-image-pipeline/actions/workflows/docker-ci.yml/badge.svg">
+</p>
 
 ## 📌 Overview
 
