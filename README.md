@@ -175,7 +175,7 @@ docker push <gcp-repo>/my-anir:v1
 
 **Anirban Dalui**
 
-DevOps Engineer | Cloud Enthusiast
+DevOps Engineer | Multi-Cloud Enthusiast
 
 ---
 
